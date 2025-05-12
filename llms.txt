@@ -1,0 +1,15 @@
+# Speed Stars
+Speed Stars is a free online running game where players can experience realistic sprinting and compete globally. The site offers instant browser-based gameplay with no downloads required.
+
+## Core Content
+- [Products](https://speedstars.xyz/): Free online running game, Speed Stars.
+- [Services](https://speedstars.xyz/): Online gaming, global leaderboards, and community competition.
+- [Blog](https://speedstars.xyz/blog/): Tips, updates, and news about Speed Stars and online gaming.
+
+## Common Resources
+- [FAQ](https://speedstars.xyz/#faq): Answers to frequently asked questions about Speed Stars.
+- [Contact](mailto:tangjei@gmail.com): Contact us for support or inquiries.
+
+## Optional
+- [About Us](https://speedstars.xyz/#about): Learn more about the Speed Stars team.
+- [Case Studies](https://speedstars.xyz/#testimonials): Success stories and player testimonials.
