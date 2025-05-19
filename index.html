@@ -50,9 +50,9 @@
 
   <!-- Game Iframe -->
   <section class="container mx-auto py-12 px-4" id="play">
-    <h2 class="text-2xl font-bold text-blue-600 mb-4">Play Speed Stars Online</h2>
+    <h2 id="main-game-display-title" class="text-2xl font-bold text-blue-600 mb-4">Play Speed Stars Online</h2>
     <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg border border-gray-200">
-      <iframe src="https://speedstars2.io/game/speed-stars/" title="Speed Stars Online Game" class="w-full h-[480px] md:h-[600px] bg-black" allowfullscreen></iframe>
+      <iframe id="main-game-content-iframe" src="https://speedstars2.io/game/speed-stars/" title="Speed Stars Online Game" class="w-full h-[480px] md:h-[600px] bg-black" allowfullscreen></iframe>
     </div>
     <p class="mt-4 text-gray-700 text-center">Enjoy the game directly in your browser. No downloads, no fees—just pure running excitement with Speed Stars!</p>
   </section>
@@ -74,6 +74,95 @@
           <h3 class="font-semibold text-lg mb-2">Free to Play</h3>
           <p>It's 100% free. Play online anytime, anywhere, without any downloads or subscriptions. Enjoy unlimited access to all game features.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Games Section -->
+  <section class="bg-gray-100 py-12 px-4" id="more-games">
+    <div class="container mx-auto">
+      <h2 class="text-2xl font-bold text-blue-600 mb-8 text-center">Explore More Exciting Games</h2> <!-- Changed to English -->
+      <div id="more-games-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+        <!-- Game 1: 3D Bowling -->
+        <div class="mini-game-item bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer" data-src="https://www.crazygames.com/embed/3d-bowling" data-gametitle="3D Bowling">
+          <img src="images/games/3dbowling.jpg" alt="3D Bowling Game Thumbnail" class="w-full h-32 sm:h-40 object-cover pointer-events-none">
+          <div class="p-3">
+            <h3 class="font-semibold text-sm text-gray-800 truncate pointer-events-none">3D Bowling</h3>
+          </div>
+        </div>
+
+        <!-- Game 2: 8 Ball Billiards Classic -->
+        <div class="mini-game-item bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer" data-src="https://www.crazygames.com/embed/8-ball-billiards-classic" data-gametitle="8 Ball Billiards Classic">
+          <img src="images/games/8Ball.jpg" alt="8 Ball Billiards Classic Game Thumbnail" class="w-full h-32 sm:h-40 object-cover pointer-events-none">
+          <div class="p-3">
+            <h3 class="font-semibold text-sm text-gray-800 truncate pointer-events-none">8 Ball Billiards Classic</h3>
+          </div>
+        </div>
+
+        <!-- Game 3: Archers Battle -->
+        <div class="mini-game-item bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer" data-src="https://www.crazygames.com/embed/archers-battle" data-gametitle="Archers Battle">
+          <img src="images/games/archersbattle.jpg" alt="Archers Battle Game Thumbnail" class="w-full h-32 sm:h-40 object-cover pointer-events-none">
+          <div class="p-3">
+            <h3 class="font-semibold text-sm text-gray-800 truncate pointer-events-none">Archers Battle</h3>
+          </div>
+        </div>
+
+        <!-- Game 4: AutoRPG Arena -->
+        <div class="mini-game-item bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer" data-src="https://www.crazygames.com/embed/autorpg-arena-fbu" data-gametitle="AutoRPG Arena">
+          <img src="images/games/autoRPG.jpg" alt="AutoRPG Arena Game Thumbnail" class="w-full h-32 sm:h-40 object-cover pointer-events-none">
+          <div class="p-3">
+            <h3 class="font-semibold text-sm text-gray-800 truncate pointer-events-none">AutoRPG Arena</h3>
+          </div>
+        </div>
+
+        <!-- Game 5: Black Friday Mystery Sale -->
+        <div class="mini-game-item bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer" data-src="https://www.crazygames.com/embed/black-friday-mystery-sale" data-gametitle="Black Friday Mystery Sale">
+          <img src="images/games/black-friday-mystery-sale.jpg" alt="Black Friday Mystery Sale Game Thumbnail" class="w-full h-32 sm:h-40 object-cover pointer-events-none">
+          <div class="p-3">
+            <h3 class="font-semibold text-sm text-gray-800 truncate pointer-events-none">Black Friday Mystery Sale</h3>
+          </div>
+        </div>
+
+        <!-- Game 6: Boxing Random -->
+        <div class="mini-game-item bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer" data-src="https://www.crazygames.com/embed/boxing-random" data-gametitle="Boxing Random">
+          <img src="images/games/boxing-random.jpg" alt="Boxing Random Game Thumbnail" class="w-full h-32 sm:h-40 object-cover pointer-events-none">
+          <div class="p-3">
+            <h3 class="font-semibold text-sm text-gray-800 truncate pointer-events-none">Boxing Random</h3>
+          </div>
+        </div>
+
+        <!-- Game 7: Chicken Scream -->
+        <div class="mini-game-item bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer" data-src="https://www.crazygames.com/embed/chicken-scream" data-gametitle="Chicken Scream">
+          <img src="images/games/chicken-scream.jpg" alt="Chicken Scream Game Thumbnail" class="w-full h-32 sm:h-40 object-cover pointer-events-none">
+          <div class="p-3">
+            <h3 class="font-semibold text-sm text-gray-800 truncate pointer-events-none">Chicken Scream</h3>
+          </div>
+        </div>
+
+        <!-- Game 8: Dig Tycoon - Idle Game 3D -->
+        <div class="mini-game-item bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer" data-src="https://www.crazygames.com/embed/dig-tycoon---idle-game-3d" data-gametitle="Dig Tycoon - Idle Game 3D">
+          <img src="images/games/dig-tycoon.jpg" alt="Dig Tycoon - Idle Game 3D Game Thumbnail" class="w-full h-32 sm:h-40 object-cover pointer-events-none">
+          <div class="p-3">
+            <h3 class="font-semibold text-sm text-gray-800 truncate pointer-events-none">Dig Tycoon - Idle Game 3D</h3>
+          </div>
+        </div>
+
+        <!-- Game 9: Duck Duck Clicker -->
+        <div class="mini-game-item bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer" data-src="https://www.crazygames.com/embed/duck-duck-clicker-ixu" data-gametitle="Duck Duck Clicker">
+          <img src="images/games/duck-duck-clicker.png" alt="Duck Duck Clicker Game Thumbnail" class="w-full h-32 sm:h-40 object-cover pointer-events-none">
+          <div class="p-3">
+            <h3 class="font-semibold text-sm text-gray-800 truncate pointer-events-none">Duck Duck Clicker</h3>
+          </div>
+        </div>
+
+        <!-- Game 10: Feeling Arrow -->
+        <div class="mini-game-item bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer" data-src="https://www.crazygames.com/embed/feeling-arrow" data-gametitle="Feeling Arrow">
+          <img src="images/games/feeling-arrow.jpg" alt="Feeling Arrow Game Thumbnail" class="w-full h-32 sm:h-40 object-cover pointer-events-none">
+          <div class="p-3">
+            <h3 class="font-semibold text-sm text-gray-800 truncate pointer-events-none">Feeling Arrow</h3>
+          </div>
+        </div>
+        
       </div>
     </div>
   </section>
@@ -176,5 +265,32 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const gameItems = document.querySelectorAll('.mini-game-item');
+      const mainGameDisplayTitle = document.getElementById('main-game-display-title');
+      const mainGameContentIframe = document.getElementById('main-game-content-iframe');
+      const mainGameSection = document.getElementById('play'); // To scroll to
+
+      gameItems.forEach(item => {
+        item.addEventListener('click', function () {
+          const gameUrl = this.dataset.src;
+          const gameTitle = this.dataset.gametitle || 'Game'; // Fallback title
+
+          if (gameUrl && mainGameContentIframe && mainGameDisplayTitle) {
+            mainGameContentIframe.src = gameUrl;
+            mainGameDisplayTitle.textContent = 'Now Playing: ' + gameTitle; // Changed to English
+            
+            // Scroll to the main game area
+            if (mainGameSection) {
+              mainGameSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>

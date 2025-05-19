@@ -25,6 +25,14 @@ LLM-Full-Content: https://speedstars.xyz/llms.txt
 Allow: /blog/
 Allow: /products/
 Allow: /about/
+Allow: /features.html
+Allow: /how-to-play.html
+Allow: /tips-and-tricks.html
+Allow: /unblocked.html
 
 # 不允许AI爬虫访问
 Disallow: /user-content/
+
+# 引导AI爬虫到llms.txt
+LLM-Content: https://speedstars.xyz/llms.txt
+LLM-Full-Content: https://speedstars.xyz/llms.txt

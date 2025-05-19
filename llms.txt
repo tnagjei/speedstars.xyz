@@ -4,6 +4,10 @@ Speed Stars is a free online running game where players can experience realistic
 ## Core Content
 - [Products](https://speedstars.xyz/): Free online running game, Speed Stars.
 - [Services](https://speedstars.xyz/): Online gaming, global leaderboards, and community competition.
+- [Features](https://speedstars.xyz/features.html): Detailed introduction to game features.
+- [How to Play](https://speedstars.xyz/how-to-play.html): Step-by-step guide for new players.
+- [Tips & Tricks](https://speedstars.xyz/tips-and-tricks.html): Strategies and tips to improve your performance.
+- [Unblocked](https://speedstars.xyz/unblocked.html): Play Speed Stars at school or work without restrictions.
 - [Blog](https://speedstars.xyz/blog/): Tips, updates, and news about Speed Stars and online gaming.
 
 ## Common Resources
