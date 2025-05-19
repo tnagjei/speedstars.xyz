@@ -260,7 +260,7 @@
         &copy; 2024 tangjei. All rights reserved. | Contact: <a href="mailto:tangjei@gmail.com" class="text-blue-400 hover:underline">tangjei@gmail.com</a>
         | <a href="/features.html" class="text-blue-400 hover:underline">Features</a>
         | <a href="/how-to-play.html" class="text-blue-400 hover:underline">How to Play</a>
-        | <a href="/tips-and-tricks.html" class="text-blue-400 hover:underline">Tips & Tricks</a> {/* 新增 */}
+        | <a href="/tips-and-tricks.html" class="text-blue-400 hover:underline">Tips & Tricks</a> <!-- New -->
         | <a href="/unblocked.html" class="text-blue-400 hover:underline">Play Unblocked</a>
       </div>
     </div>
@@ -292,5 +292,48 @@
     });
   </script>
 
+<!-- Local Comment Section Start -->
+<section class="bg-white py-8 px-4 max-w-xl mx-auto mt-8 rounded shadow" id="local-comments">
+  <h2 class="text-xl font-bold text-blue-600 mb-4">Comments (Local Only)</h2>
+  <div>
+    <textarea id="comment-input" class="w-full border rounded p-2 mb-2" rows="3" placeholder="Write your comment..."></textarea>
+    <button id="submit-comment" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit</button>
+  </div>
+  <ul id="comment-list" class="mt-4 space-y-2"></ul>
+</section>
+<!-- Local Comment Section End -->
+
+<script>
+  // Local comment functionality
+  function loadComments() {
+    const comments = JSON.parse(localStorage.getItem('localComments') || '[]');
+    const list = document.getElementById('comment-list');
+    list.innerHTML = '';
+    comments.forEach(function(item) {
+      const li = document.createElement('li');
+      li.className = 'border-b pb-2 text-gray-800';
+      li.innerHTML = `<span class="block">${item.text}</span>
+        <span class="text-xs text-gray-400">${item.time}</span>`;
+      list.appendChild(li);
+    });
+  }
+
+  document.getElementById('submit-comment').onclick = function() {
+    const input = document.getElementById('comment-input');
+    const text = input.value.trim();
+    if (!text) return;
+    const comments = JSON.parse(localStorage.getItem('localComments') || '[]');
+    comments.push({
+      text: text,
+      time: new Date().toLocaleString()
+    });
+    localStorage.setItem('localComments', JSON.stringify(comments));
+    input.value = '';
+    loadComments();
+  };
+
+  // Display comments on page load
+  window.addEventListener('DOMContentLoaded', loadComments);
+</script>
 </body>
 </html>
