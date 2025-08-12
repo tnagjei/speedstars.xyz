@@ -11,23 +11,12 @@
   <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
   <link rel="preconnect" href="https://speedstars2.io" crossorigin>
   <link rel="preconnect" href="https://a.poki.com" crossorigin>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3083296102953963"
-       crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) --> 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F9H505LN7M"></script> 
-  <script> 
-    window.dataLayer = window.dataLayer || []; 
-    function gtag(){dataLayer.push(arguments);} 
-    gtag('js', new Date()); 
-   
-    gtag('config', 'G-F9H505LN7M'); 
-  </script>
+  
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
   <!-- Facebook SDK -->  
   <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_CN/sdk.js#xfbml=1&version=v23.0"></script>
+  
   
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
@@ -404,6 +393,41 @@
 
   // Display comments on page load
   window.addEventListener('DOMContentLoaded', loadComments);
+</script>
+
+<!-- Deferred and on-demand third-party scripts -->
+<script defer src="https://cdn.tailwindcss.com"></script>
+<script>
+  // Load Google Analytics after window load
+  window.addEventListener('load', function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-F9H505LN7M';
+    s.onload = function () {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-F9H505LN7M');
+    };
+    document.head.appendChild(s);
+  });
+
+  // Load Adsense after window load
+  window.addEventListener('load', function () {
+    var a = document.createElement('script');
+    a.async = true;
+    a.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3083296102953963';
+    a.crossOrigin = 'anonymous';
+    document.head.appendChild(a);
+  });
+
+  // Load Facebook SDK after window load
+  window.addEventListener('load', function () {
+    var f = document.createElement('script');
+    f.async = true; f.defer = true; f.crossOrigin = 'anonymous';
+    f.src = 'https://connect.facebook.net/zh_CN/sdk.js#xfbml=1&version=v23.0';
+    document.body.appendChild(f);
+  });
 </script>
 </body>
 </html>
