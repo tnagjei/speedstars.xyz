@@ -92,8 +92,9 @@
   <!-- Game Iframe -->
   <section class="container mx-auto py-12 px-4" id="play">
     <h2 id="main-game-display-title" class="text-2xl font-bold text-blue-600 mb-4">Play Speed Stars Online</h2>
-    <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg border border-gray-200">
-      <iframe id="main-game-content-iframe" src="https://speedstars2.io/game/speed-stars/" title="Speed Stars Online Game" class="w-full h-[480px] md:h-[600px] bg-black" allowfullscreen></iframe>
+    <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg border border-gray-200 relative">
+      <iframe id="main-game-content-iframe" data-src="https://speedstars2.io/game/speed-stars/" title="Speed Stars Online Game" class="w-full h-[480px] md:h-[600px] bg-black" allowfullscreen></iframe>
+      <button id="load-main-game" class="absolute inset-0 m-auto h-12 w-48 rounded-full bg-white/90 text-blue-600 font-semibold shadow hover:bg-white transition flex items-center justify-center">Click to Play</button>
     </div>
     <p class="mt-4 text-gray-700 text-center">Enjoy the game directly in your browser. No downloads, no fees—just pure running excitement with Speed Stars!</p>
   </section>
@@ -328,6 +329,18 @@
       const mainGameDisplayTitle = document.getElementById('main-game-display-title');
       const mainGameContentIframe = document.getElementById('main-game-content-iframe');
       const mainGameSection = document.getElementById('play'); // To scroll to
+      const loadMainGameBtn = document.getElementById('load-main-game');
+
+      // Click-to-load main game
+      if (loadMainGameBtn && mainGameContentIframe) {
+        loadMainGameBtn.addEventListener('click', function () {
+          const src = mainGameContentIframe.getAttribute('data-src');
+          if (src && !mainGameContentIframe.src) {
+            mainGameContentIframe.src = src;
+          }
+          loadMainGameBtn.style.display = 'none';
+        });
+      }
 
       gameItems.forEach(item => {
         item.addEventListener('click', function () {
@@ -337,6 +350,7 @@
           if (gameUrl && mainGameContentIframe && mainGameDisplayTitle) {
             mainGameContentIframe.src = gameUrl;
             mainGameDisplayTitle.textContent = 'Now Playing: ' + gameTitle; // Changed to English
+            if (loadMainGameBtn) loadMainGameBtn.style.display = 'none';
             
             // Scroll to the main game area
             if (mainGameSection) {
